@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:empresasenac/pages/TelaEmpresa.dart';
 
 class initialPage extends StatefulWidget{
   @override
@@ -7,6 +8,11 @@ class initialPage extends StatefulWidget{
 
 class _initialPageState extends State<initialPage>{
 
+  void _abrirEmpresa(){
+    Navigator.push(
+      context, MaterialPageRoute(builder: (context) => TelaEmpresa()));
+    print('EMPRESA');
+  }
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -30,6 +36,7 @@ class _initialPageState extends State<initialPage>{
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   GestureDetector(
+                    onTap: _abrirEmpresa,
                     child: Image.asset('images/menu_empresa.png'),
                   ),
                   GestureDetector(
