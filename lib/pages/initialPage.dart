@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:empresasenac/pages/TelaEmpresa.dart';
 
+import 'TelaCliente.dart';
+import 'TelaContato.dart';
+import 'TelaServico.dart';
+
 class initialPage extends StatefulWidget{
   @override
   _initialPageState createState() => _initialPageState();
@@ -11,6 +15,24 @@ class _initialPageState extends State<initialPage>{
   void _abrirEmpresa(){
     Navigator.push(
       context, MaterialPageRoute(builder: (context) => TelaEmpresa()));
+    print('EMPRESA');
+  }
+
+  void _abrirContato(){
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => TelaContato()));
+    print('EMPRESA');
+  }
+
+  void _abrirCliente(){
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => TelaCliente()));
+    print('EMPRESA');
+  }
+
+  void _abrirServico(){
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => TelaServico()));
     print('EMPRESA');
   }
   @override
@@ -40,6 +62,7 @@ class _initialPageState extends State<initialPage>{
                     child: Image.asset('images/menu_empresa.png'),
                   ),
                   GestureDetector(
+                    onTap: _abrirServico,
                     child: Image.asset('images/menu_servico.png'),
                   ),
                 ],
@@ -51,9 +74,11 @@ class _initialPageState extends State<initialPage>{
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   GestureDetector(
+                    onTap: _abrirCliente,
                     child: Image.asset('images/menu_cliente.png'),
                   ),
                   GestureDetector(
+                    onTap: _abrirContato,
                     child: Image.asset('images/menu_contato.png'),
                   )
                 ],

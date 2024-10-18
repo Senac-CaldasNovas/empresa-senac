@@ -62,6 +62,7 @@ flutter:
   assets:
     - images/cliente1.png
     - images/cliente2.png
+    - images/cliente3png
     - images/detalhe_cliente.png
     - images/detalhe_contato.png
     - images/detalhe_empresa.png
